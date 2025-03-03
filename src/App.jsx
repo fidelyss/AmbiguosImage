@@ -1,8 +1,11 @@
 import React from "react"
-import './styles/index.css'
+import Navbar from "./components/Navbar/Navbar.jsx"
+import Hero from "./components/Hero/Hero.jsx"
+import Coments from "./components/Coments/Coments.jsx"
 export default function App() {
     return (<>
-        <div className="container">dasdas</div>
-        <div className="container">dasdas</div>
+        <Navbar />
+        <Hero />
+        <Coments />
     </>)
 }

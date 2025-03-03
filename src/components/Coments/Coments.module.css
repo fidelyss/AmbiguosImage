@@ -1,0 +1,24 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    background-color: blueviolet;
+    min-width: 500px;
+    min-height: 300px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.childChild {
+    height: 5%;
+    width: 5%;
+    margin-right: 10px;
+    margin-left: 10px;
+}

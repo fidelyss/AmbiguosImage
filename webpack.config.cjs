@@ -23,9 +23,24 @@ module.exports = {
                 }
             },
             {
+                test: /\.module\.css$/,
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: {
+                                namedExport: false
+                            }
+                        },
+                    },
+                ],
+            },
+            {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            }
+                exclude: /\.module\.css$/,
+                use: ['style-loader', 'css-loader'],
+            },
         ]
     },
     resolve: {
@@ -34,7 +49,7 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template:'./src/index.html'
+            template: './src/index.html'
         })
     ],
     devtool: 'source-map',

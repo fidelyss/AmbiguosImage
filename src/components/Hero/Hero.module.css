@@ -1,0 +1,38 @@
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    background-color: blueviolet;
+    min-width: 500px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.childChild {
+    height: 5%;
+    width: 5%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.childChild:nth-child(1) {
+    order: 1;
+}
+
+.childChild:nth-child(2) {
+    order: 0;
+    align-self: flex-end;
+}
+
+.test {
+    width: 100px;
+    height: 100px;
+    background-color: cadetblue;
+}
